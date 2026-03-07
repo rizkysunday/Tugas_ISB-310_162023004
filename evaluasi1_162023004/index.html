@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Sistem Informasi</title>
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header"></div>
+
+    <div class="content">
+
+        <div class="sidebar">
+            <button onclick="home()">Home</button>
+            <button onclick="bukaMenu()">Menu</button>
+            <button onclick="bukaCalculator()">Calculator</button>
+        </div>
+
+        <div class="main">
+
+            <!-- HOME -->
+            <div id="homePage">
+                klik button disamping &gt;&gt;
+                <button onclick="shout()">Shout</button>
+            </div>
+
+            <!-- MENU -->
+            <div id="menuPage" style="display:none;">
+
+                <div class="menuWrapper">
+
+                    <table class="menuTable">
+
+                        <tr>
+                        <th>No</th>
+                        <th>Makanan/Minuman</th>
+                        <th>Harga</th>
+                        <th>Pesan</th>
+                        </tr>
+
+                        <tr>
+                        <td>1</td>
+                        <td>Bakso Istimewa</td>
+                        <td>Rp 12000</td>
+                        <td><input type="number" min="0" value="0" onchange="hitung()"></td>
+                        </tr>
+
+                        <tr>
+                        <td>2</td>
+                        <td>Soto Spesial</td>
+                        <td>Rp 10000</td>
+                        <td><input type="number" min="0" value="0" onchange="hitung()"></td>
+                        </tr>
+
+                        <tr>
+                        <td>3</td>
+                        <td>Mie Ayam Super</td>
+                        <td>Rp 15000</td>
+                        <td><input type="number" min="0" value="0" onchange="hitung()"></td>
+                        </tr>
+
+                        <tr>
+                        <td colspan="3">Jumlah Total</td>
+                        <td><span id="total">0</span></td>
+                        </tr>
+
+                        <tr>
+                        <td colspan="3">Diskon</td>
+                        <td><span id="diskon">0</span></td>
+                        </tr>
+
+                        <tr>
+                        <td colspan="3"><b>Jumlah Bayar</b></td>
+                        <td><b><span id="bayar">0</span></b></td>
+                        </tr>
+
+                    </table>
+
+                    <div class="resetArea">
+                        <button onclick="resetMenu()">Reset</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CALCULATOR -->
+            <div id="calcPage" style="display:none;">
+
+            <input type="number" id="angka1">
+
+                <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+                </select>
+
+                <input type="number" id="angka2">
+
+                = 
+
+                <input type="text" id="hasilCalc" readonly>
+
+                <br><br>
+
+                <button onclick="hitungCalc()" class="btnHitung">Hitung</button>
+                <button onclick="resetCalc()" class="btnReset">Reset</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        202024<br>
+        Sistem Informasi ITENAS 2024
+    </div>
+
+</div>
+
+<script src="JS/script.js"></script>
+
+</body>
+</html>
